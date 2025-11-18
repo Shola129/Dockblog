@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Legal — DigiDuck</title>
+<script src="../assets/js/jquery.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+   <div class="logo"><a href="../index.html">DigiDuck</a></div> 
+      <div id="desktop">
+         <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+             <li><a href="../categories/education.html" data-cat="education">Education</a></li>
+            <li><a href="../categories/insurance.html" data-cat="insurance">Insurance</a></li>
+            <li><a href="../categories/legal.html" data-cat="legal">Legal Advice</a></li>
+            <li><a href="../categories/finance.html" data-cat="finance">Finance</a></li>
+            <li><a href="../categories/health.html" data-cat="health">Health</a></li>
+            <li><a href="../categories/crypto.html" data-cat="crypto">Crypto</a></li>
+      </ul>
+    </nav>
+   </div>
+      <button id="hamburger" class="hamburger" aria-label="Open menu"><span id="menu">☰</span> <span id="cancel">🗙</span></button>
+</header>
+   <div id="me"> 
+       <div id="menu-moblie">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="legal.html">Legal Advice</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="health.html">Health</a></li>
+        <li><a href="crypto.html">Crypto</a></li>
+       </div>
+     </div>
+<style>
+  #menu-toggle{display: none;}
+  a{color: white; text-decoration: none;}
+  .articles-grid{display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;} 
+  .card{ width: 400px; height: auto}
+  *{box-sizing:border-box}
+   #menu-moblie{display: none;}
+  @media (max-width:768px){
+     .desktop-nav{display: none;}
+     #menu-toggle{display: block;}  
+     #cancel{display: none;}
+            #menu-moblie{width: 100%;padding-top: 5%; padding-bottom: 5%; z-index: 2; background-color: #222; height: auto; padding-left: 60%; list-style-type: none;  color: aliceblue; background-color: #0f2134; margin-top: -0px; font-size: 18px;}
+            a[href]{
+              color: white;
+              text-decoration-line: none;
+            }
+  }
+</style>
+ <script>
+    $("#menu").on("click", function(){
+        $("#menu-moblie").slideDown("slow");
+         $("#cancel").show("slow");
+         $(this).hide();
+    })
+
+    $("#cancel").on("click", function(){
+       $("#menu-moblie").slideUp("slow");
+       $("#menu").show("slow");
+       $(this).hide();
+    })
+   </script>
+<section class="hero"><div class="container"><h1>Legal</h1>
+<p id="p">Explore in-depth articles, guides, and practical advice on Legal — written for readers who want clear, actionable information.</p></div></section>
+<main class="container"><section class="articles-grid">
+
+<article class="card">
+  <h2>Understanding Contracts: A Practical Guide</h2>
+  <img src="../assets/images/placeholder.png" alt="Understanding Contracts: A Practical Guide" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Understanding Contracts: A Practical Guide — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal1.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Employment Law Basics for Employees</h2>
+  <img src="../assets/images/placeholder.png" alt="Employment Law Basics for Employees" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Employment Law Basics for Employees — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal2.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Consumer Protection Rights Explained</h2>
+  <img src="../assets/images/placeholder.png" alt="Consumer Protection Rights Explained" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Consumer Protection Rights Explained — A clear, practical guide that focuses on what matters most for people dealing with legal.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/legal/legal3.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>How to Start a Small Business Legally</h2>
+  <img src="../assets/images/placeholder.png" alt="How to Start a Small Business Legally" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">How to Start a Small Business Legally — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal4.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Landlord and Tenant Rights</h2>
+  <img src="../assets/images/placeholder.png" alt="Landlord and Tenant Rights" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Landlord and Tenant Rights — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal5.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Intellectual Property Essentials</h2>
+  <img src="../assets/images/placeholder.png" alt="Intellectual Property Essentials" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Intellectual Property Essentials — A clear, practical guide that focuses on what matters most for people dealing with legal.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/legal/legal6.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Family Law: Marriage and Custody Basics</h2>
+  <img src="../assets/images/placeholder.png" alt="Family Law: Marriage and Custody Basics" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Family Law: Marriage and Custody Basics — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal7.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>How to Prepare a Simple Will</h2>
+  <img src="../assets/images/placeholder.png" alt="How to Prepare a Simple Will" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">How to Prepare a Simple Will — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal8.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Navigating Small Claims Court</h2>
+  <img src="../assets/images/placeholder.png" alt="Navigating Small Claims Court" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Navigating Small Claims Court — A clear, practical guide that focuses on what matters most for people dealing with legal.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/legal/legal9.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Data Privacy Laws You Should Know</h2>
+  <img src="../assets/images/placeholder.png" alt="Data Privacy Laws You Should Know" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Data Privacy Laws You Should Know — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal10.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Alternative Dispute Resolution Explained</h2>
+  <img src="../assets/images/placeholder.png" alt="Alternative Dispute Resolution Explained" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Alternative Dispute Resolution Explained — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal11.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Legal Fees: What to Expect</h2>
+  <img src="../assets/images/placeholder.png" alt="Legal Fees: What to Expect" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Legal Fees: What to Expect — A clear, practical guide that focuses on what matters most for people dealing with legal.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/legal/legal12.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Reading Legal Documents with Confidence</h2>
+  <img src="../assets/images/placeholder.png" alt="Reading Legal Documents with Confidence" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Reading Legal Documents with Confidence — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal13.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Legal Considerations for Freelancers</h2>
+  <img src="../assets/images/placeholder.png" alt="Legal Considerations for Freelancers" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Legal Considerations for Freelancers — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal14.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Protecting Yourself from Scams & Fraud</h2>
+  <img src="../assets/images/placeholder.png" alt="Protecting Yourself from Scams & Fraud" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Protecting Yourself from Scams & Fraud — A clear, practical guide that focuses on what matters most for people dealing with legal.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/legal/legal15.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Contract Negotiation Basics</h2>
+  <img src="../assets/images/placeholder.png" alt="Contract Negotiation Basics" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Contract Negotiation Basics — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal16.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Regulatory Compliance for Small Businesses</h2>
+  <img src="../assets/images/placeholder.png" alt="Regulatory Compliance for Small Businesses" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Regulatory Compliance for Small Businesses — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal17.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Basics of Immigration Law</h2>
+  <img src="../assets/images/placeholder.png" alt="Basics of Immigration Law" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Basics of Immigration Law — A clear, practical guide that focuses on what matters most for people dealing with legal.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/legal/legal18.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Consumer Debt and Your Rights</h2>
+  <img src="../assets/images/placeholder.png" alt="Consumer Debt and Your Rights" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Consumer Debt and Your Rights — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal19.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Trademark vs Copyright: Key Differences</h2>
+  <img src="../assets/images/placeholder.png" alt="Trademark vs Copyright: Key Differences" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Trademark vs Copyright: Key Differences — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal20.html">Read More</a>
+</article>
+</section></main>
+<br><br><br><br>
+<footer class="container-row" id="hold-foot">
+    <p>Developed by  Ekundayo Shola | <a id="link" href="https://sholafolio.kessug.com" target="_blank">More Info.</a></p>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

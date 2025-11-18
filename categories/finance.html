@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finance — DigiDuck</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/jquery.js"></script>
+</head>
+<body>
+    <header class="navbar">
+   <div class="logo"><a href="../index.html">DigiDuck</a></div> 
+      <div id="desktop">
+         <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+             <li><a href="../categories/education.html" data-cat="education">Education</a></li>
+            <li><a href="../categories/insurance.html" data-cat="insurance">Insurance</a></li>
+            <li><a href="../categories/legal.html" data-cat="legal">Legal Advice</a></li>
+            <li><a href="../categories/finance.html" data-cat="finance">Finance</a></li>
+            <li><a href="../categories/health.html" data-cat="health">Health</a></li>
+            <li><a href="../categories/crypto.html" data-cat="crypto">Crypto</a></li>
+      </ul>
+    </nav>
+   </div>
+      <button id="hamburger" class="hamburger" aria-label="Open menu"><span id="menu">☰</span> <span id="cancel">🗙</span></button>
+</header>
+   <div id="me"> 
+       <div id="menu-moblie">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        <li><a href="legal.html">Legal Advice</a></li>
+        <li><a href="finance.html">Finance</a></li>
+        <li><a href="health.html">Health</a></li>
+        <li><a href="crypto.html">Crypto</a></li>
+       </div>
+     </div>
+<style>
+  #menu-toggle{display: none;}
+  a{color: white; text-decoration: none;}
+  .articles-grid{display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;} 
+  .card{ width: 400px; height: auto}
+  *{box-sizing:border-box}
+   #menu-moblie{display: none;}
+  @media (max-width:768px){
+     .desktop-nav{display: none;}
+     #menu-toggle{display: block;}  
+     #cancel{display: none;}
+            #menu-moblie{width: 100%;padding-top: 5%; padding-bottom: 5%; z-index: 2; background-color: #222; height: auto; padding-left: 60%; list-style-type: none;  color: aliceblue; background-color: #0f2134; margin-top: -0px; font-size: 18px;}
+            a[href]{
+              color: white;
+              text-decoration-line: none;
+            }
+  }
+</style>
+ <script>
+    $("#menu").on("click", function(){
+        $("#menu-moblie").slideDown("slow");
+         $("#cancel").show("slow");
+         $(this).hide();
+    })
+
+    $("#cancel").on("click", function(){
+       $("#menu-moblie").slideUp("slow");
+       $("#menu").show("slow");
+       $(this).hide();
+    })
+   </script>
+<section class="hero"><div class="container"><h1>Finance</h1>
+<p id="p">Explore in-depth articles, guides, and practical advice on Finance — written for readers who want clear, actionable information.</p></div></section>
+<main class="container"><section class="articles-grid">
+
+<article class="card">
+  <h2>Mortgages 101: How Loans Work</h2>
+  <img src="../assets/images/placeholder.png" alt="Mortgages 101: How Loans Work" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Mortgages 101: How Loans Work — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance1.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Improving Your Credit Score Fast</h2>
+  <img src="../assets/images/placeholder.png" alt="Improving Your Credit Score Fast" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Improving Your Credit Score Fast — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance2.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Personal Budgeting Systems That Work</h2>
+  <img src="../assets/images/placeholder.png" alt="Personal Budgeting Systems That Work" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Personal Budgeting Systems That Work — A clear, practical guide that focuses on what matters most for people dealing with finance.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/finance/finance3.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Student Loan Repayment Strategies</h2>
+  <img src="../assets/images/placeholder.png" alt="Student Loan Repayment Strategies" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Student Loan Repayment Strategies — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance4.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>How to Refinance a Mortgage</h2>
+  <img src="../assets/images/placeholder.png" alt="How to Refinance a Mortgage" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">How to Refinance a Mortgage — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance5.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Understanding Interest Rates & APR</h2>
+  <img src="../assets/images/placeholder.png" alt="Understanding Interest Rates & APR" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Understanding Interest Rates & APR — A clear, practical guide that focuses on what matters most for people dealing with finance.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/finance/finance6.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Home Equity Loans vs HELOCs</h2>
+  <img src="../assets/images/placeholder.png" alt="Home Equity Loans vs HELOCs" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Home Equity Loans vs HELOCs — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance7.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Debt Snowball vs Debt Avalanche</h2>
+  <img src="../assets/images/placeholder.png" alt="Debt Snowball vs Debt Avalanche" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Debt Snowball vs Debt Avalanche — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance8.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Saving for Retirement: A Beginner"s Guide</h2>
+  <img src="../assets/images/placeholder.png" alt="Saving for Retirement: A Beginners Guide" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Saving for Retirement: A Beginner"s Guide — A clear, practical guide that focuses on what matters most for people dealing with finance.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/finance/finance9.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Investing Basics: Stocks & Bonds</h2>
+  <img src="../assets/images/placeholder.png" alt="Investing Basics: Stocks & Bonds" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Investing Basics: Stocks & Bonds — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance10.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Tax Planning Tips for Individuals</h2>
+  <img src="../assets/images/placeholder.png" alt="Tax Planning Tips for Individuals" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Tax Planning Tips for Individuals — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance11.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Building an Emergency Fund</h2>
+  <img src="../assets/images/placeholder.png" alt="Building an Emergency Fund" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Building an Emergency Fund — A clear, practical guide that focuses on what matters most for people dealing with finance.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/finance/finance12.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Credit Card Rewards: Use Wisely</h2>
+  <img src="../assets/images/placeholder.png" alt="Credit Card Rewards: Use Wisely" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Credit Card Rewards: Use Wisely — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance13.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Buying vs Leasing a Car</h2>
+  <img src="../assets/images/placeholder.png" alt="Buying vs Leasing a Car" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Buying vs Leasing a Car — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance14.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Understanding Mortgage Insurance</h2>
+  <img src="../assets/images/placeholder.png" alt="Understanding Mortgage Insurance" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Understanding Mortgage Insurance — A clear, practical guide that focuses on what matters most for people dealing with finance.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/finance/finance15.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Small Business Financing Options</h2>
+  <img src="../assets/images/placeholder.png" alt="Small Business Financing Options" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Small Business Financing Options — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance16.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Estate Planning Fundamentals</h2>
+  <img src="../assets/images/placeholder.png" alt="Estate Planning Fundamentals" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Estate Planning Fundamentals — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance17.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Personal Finance Apps that Help</h2>
+  <img src="../assets/images/placeholder.png" alt="Personal Finance Apps that Help" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Personal Finance Apps that Help — A clear, practical guide that focuses on what matters most for people dealing with finance.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/finance/finance18.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>Managing Cash Flow for Freelancers</h2>
+  <img src="../assets/images/placeholder.png" alt="Managing Cash Flow for Freelancers" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Managing Cash Flow for Freelancers — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance19.html">Read More</a>
+</article>
+
+<article class="card">
+  <h2>How Inflation Affects Your Money</h2>
+  <img src="../assets/images/placeholder.png" alt="How Inflation Affects Your Money" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">How Inflation Affects Your Money — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance20.html">Read More</a>
+</article>
+</section></main>
+<br><br><br><br>
+<footer class="container-row" id="hold-foot">
+    <p>Developed by  Ekundayo Shola | <a id="link" href="https://sholafolio.kessug.com" target="_blank">More Info.</a></p>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

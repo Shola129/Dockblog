@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DigiDuck — Knowledge Hub</title>
+  <script src="assets/js/jquery.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">DigiDuck</div>
+      <ul class="nav-links">
+          <li id="active"><a href="index.html" data-cat="all" class="active" >Home</a></li>
+          <button id="cata">Catagories</button>
+         <div id="hold-categories">
+            <li><a href="categories/education.html" data-cat="education">Education</a></li>
+            <li><a href="categories/insurance.html" data-cat="insurance">Insurance</a></li>
+            <li><a href="categories/legal.html" data-cat="legal">Legal Advice</a></li>
+            <li><a href="categories/finance.html" data-cat="finance">Finance</a></li>
+            <li><a href="categories/health.html" data-cat="health">Health</a></li>
+            <li><a href="categories/crypto.html" data-cat="crypto">Crypto</a></li>
+        </div>
+    </ul>
+   <!-- mobile hamburger -->
+    <button id="hamburger" class="hamburger" aria-label="Open menu"><span id="menu">☰</span> <span id="cancel">🗙</span></button>
+    </nav>
+  </header> <br><br>
+   <div id="me"> 
+       <div id="menu-moblie">
+            <li><a href="categories/education.html" data-cat="education">Education</a></li>
+            <li><a href="categories/insurance.html" data-cat="insurance">Insurance</a></li>
+            <li><a href="categories/legal.html" data-cat="legal">Legal Advice</a></li>
+            <li><a href="categories/finance.html" data-cat="finance">Finance</a></li>
+            <li><a href="categories/health.html" data-cat="health">Health</a></li>
+            <li><a href="categories/crypto.html" data-cat="crypto">Crypto</a></li>
+       </div>
+     </div>
+  <div id="head">
+    
+  <!-- HERO --> <br /><br />
+  <section class="hero container-row">
+    <h1>Welcome to DigiDuck</h1>
+    <p id="p2">Your hub for Education, Insurance, Legal Advice, Finance, Health & Medical, and Cryptocurrency insights.</p>
+  </section>
+  </div>
+<br><br>
+      <!-- desktop nav (navigates to category pages) -->
+      <style>  
+        #hold-categories{
+                  display: none;
+                    position: absolute;
+            background:white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            z-index: 100;
+             margin-left: 70px;
+            margin-top: 31px;
+
+        }
+     
+        #menu-moblie{display: none;}
+          #cata{
+          width: 100px;
+          height: 30px;
+          border-radius: 10px;
+          border-style: none;
+          
+           /*  border-style: solid;
+             border-radius: 10px;
+             border-color: rgb(25, 25, 97);
+             font-family: sans-serif; */
+        }
+        #cata:hover + #hold-categories {
+            display: block;
+        }
+        #hold-categories:hover {
+            display: block;
+        }
+        #hold-categories li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        #hold-categories a {
+            display: block;
+            padding: 8px 16px;
+            color: #222;
+            text-decoration: none;
+        }
+        #hold-categories a:hover {
+            background: #f0f0f0;
+        }
+        #ul{
+          margin-left: 40%;
+        }
+        a[href]{
+          
+          text-decoration-line: none;
+          color: white;
+        }
+        
+
+        @media (max-width: 760px) {
+            #active{
+              display: none;
+            }
+            #cata{
+              display: none;
+            }
+            #cancel{display: none;}
+            #menu-moblie{width: 100%;padding-top: 5%; padding-bottom: 5%; z-index: 2; background-color: #222; height: auto; padding-left: 60%; list-style-type: none;  color: aliceblue; background-color: #0f2134; margin-top: -50px; font-size: 18px;}
+            a[href]{
+              color: white;
+              text-decoration-line: none;
+            }
+        }
+      </style>
+<br><br>
+   <script>
+    $("#menu").on("click", function(){
+        $("#menu-moblie").slideDown("slow");
+         $("#cancel").show("slow");
+         $(this).hide();
+    })
+
+    $("#cancel").on("click", function(){
+       $("#menu-moblie").slideUp("slow");
+       $("#menu").show("slow");
+       $(this).hide();
+    })
+   </script>
+  <!-- FILTER BUTTONS (for on-page filtering) -->
+  <div class="container-row" style="margin-top:8px;">
+    <div class="filters" role="toolbar" aria-label="Filter articles">
+      <button class="category-btn" data-cat="all">All</button>
+      <button class="category-btn" data-cat="education">Education</button>
+      <button class="category-btn" data-cat="insurance">Insurance</button>
+      <button class="category-btn" data-cat="legal">Legal</button>
+      <button class="category-btn" data-cat="finance">Finance</button>
+      <button class="category-btn" data-cat="health">Health</button>
+      <button class="category-btn" data-cat="crypto">Crypto</button>
+    </div>
+  </div>
+
+  <!-- ARTICLES GRID -->
+  <main class="container-row">
+    <section id="articlesContainer" class="grid" aria-live="polite">
+
+      <!-- EDUCATION -->
+      <div class="card education" id="box">
+        <img src="assets/images/placeholder.png" alt="Active recall">
+        <h3>The Ultimate Guide to Active Recall</h3>
+        <p id="p">Discover how active recall and spaced repetition boost long-term memory and learning efficiency.</p>
+        <a class="read-more" href="./articles/education/education1.html">Read More</a>
+      </div>
+
+      <div class="card education" id="box">
+        <img src="assets/images/placeholder.png" alt="Online learning">
+        <h3>Online Learning: Tips for Success</h3>
+        <p id="p">Practical strategies to stay motivated, organised, and effective when learning online.</p>
+        <a class="read-more" href="./articles/education/education2.html">Read More</a>
+      </div>
+
+      <div class="card education" id="box">
+        <img src="assets/images/placeholder.png" alt="Note taking">
+        <h3>Effective Note-Taking Methods</h3>
+        <p id="p">From Cornell to mind maps — simple ways to take notes that actually help you remember.</p>
+        <a class="read-more" href="./articles/education/education3.html">Read More</a>
+      </div>
+
+       <div class="card">
+         <img src="../assets/images/placeholder.png" alt="" style="max-width:100%;border-radius:8px;margin:8px 0;">
+        <h3>AI in the Classroom</h3>
+        <p id="p">Artificial intelligence is transforming learning—personalized lessons, smart grading, and beyond.</p>
+        <a href="../articles/education/education5.html" class="btn read-more">Read More</a>
+      </div>
+       <div class="card">
+         <img src="../assets/images/placeholder.png" alt="" style="max-width:100%;border-radius:8px;margin:8px 0;">
+        <h3>Project-Based Learning: Step-by-Step</h3>
+        <p id="p">Use technology and tools to manage tasks more efficiently. Assess your goals, timeframe, and risk tolerance before deciding.</p>
+        <a href="../articles/education/education6.html" class="btn read-more">Read More</a>
+      </div>
+
+       <div class="card">
+         <img src="../assets/images/placeholder.png" alt="" style="max-width:100%;border-radius:8px;margin:8px 0;">
+        <h3>How to Build a Learning Roadmap</h3>
+        <p id="p">Foundational concepts form the basis for advanced strategies.  Different types exist to meet varied needs and risk profiles. Definitions and basic mechanics are essential before diving into specifics.</p>
+        <a href="../articles/education/education7.html" class="btn read-more">Read More</a>
+      </div>
+       <div class="card">
+         <img src="../assets/images/placeholder.png" alt="" style="max-width:100%;border-radius:8px;margin:8px 0;">
+        <h3>Student Motivation Psychology</h3>
+        <p id="p">Use technology and tools to manage tasks more efficiently. Failing to read fine print or understand exclusions can be costly.</p>
+        <a href="../articles/education/education8.html" class="btn read-more">Read More</a>
+      </div>
+
+
+      <!-- INSURANCE -->
+      <div class="card insurance" id="box">
+        <img src="assets/images/placeholder.png" alt="Life insurance">
+        <h3>Understanding Life Insurance</h3>
+        <p id="p">What life insurance covers, types of policies, and how to choose what fits your family.</p>
+        <a class="read-more" href="articles/insurance/ins1.html">Read More</a>
+      </div>
+
+      <div class="card insurance" id="box">
+        <img src="assets/images/placeholder.png" alt="Car insurance">
+        <h3>Car Insurance Explained</h3>
+        <p id="p">Liability, comprehensive and collision — the coverage that matter and how to save on premiums.</p>
+        <a class="read-more" href="articles/insurance/ins2.html">Read More</a>
+      </div>
+
+      <div class="card insurance" id="box">
+        <img src="assets/images/placeholder.png" alt="Health insurance">
+        <h3>Health Insurance Plans</h3>
+        <p id="p">Compare premiums, deductibles and provider networks to find suitable healthcare coverage.</p>
+        <a class="read-more" href="articles/insurance/ins3.html">Read More</a>
+      </div>
+
+      
+<article class="card insurance">
+  <h2>Renters Insurance: Do You Need It?</h2>
+  <img src="../assets/images/placeholder.png" alt="Renters Insurance: Do You Need It?" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Renters Insurance: Do You Need It? — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to insurance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/insurance/insurance8.html">Read More</a>
+</article>
+
+<article class="card insurance">
+  <h2>Pet Insurance: Pros & Cons</h2>
+  <img src="../assets/images/placeholder.png" alt="Pet Insurance: Pros & Cons" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Pet Insurance: Pros & Cons — A clear, practical guide that focuses on what matters most for people dealing with insurance.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/insurance/insurance9.html">Read More</a>
+</article>
+
+<article class="card insurance">
+  <h2>Flood & Natural Disaster Coverage</h2>
+  <img src="../assets/images/placeholder.png" alt="Flood & Natural Disaster Coverage" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Flood & Natural Disaster Coverage — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to insurance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/insurance/insurance10.html">Read More</a>
+</article>
+
+<article class="card insurance">
+  <h2>Cyber Insurance for Small Businesses</h2>
+  <img src="../assets/images/placeholder.png" alt="Cyber Insurance for Small Businesses" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Cyber Insurance for Small Businesses — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to insurance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/insurance/insurance11.html">Read More</a>
+</article>
+
+      <!-- FINANCE -->
+      <div class="card finance" id="box">
+        <img src="assets/images/placeholder.png" alt="Mortgages">
+        <h3>Mortgage 101: What You Should Know</h3>
+        <p id="p">A practical overview of mortgages, interest rates, and the application process for first-time buyers.</p>
+        <a class="read-more" href="articles/finance/fin1.html">Read More</a>
+      </div>
+
+      <div class="card finance" id="box">
+        <img src="assets/images/placeholder.png" alt="Budgeting">
+        <h3>Mastering Personal Budgeting</h3>
+        <p id="p">Realistic budgeting methods that actually help you save and reach financial goals.</p>
+        <a class="read-more" href="./articles/finance/finance1.html">Read More</a>
+      </div>
+
+      <div class="card finance" id="box">
+        <img src="assets/images/placeholder.png" alt="Credit">
+        <h3>How to Build and Maintain Good Credit</h3>
+        <p id="p">Simple steps to grow your credit score and avoid costly mistakes.</p>
+        <a class="read-more" href="./articles/finance/finance2.html">Read More</a>
+      </div>
+      <article class="card finance">
+  <h2>Investing Basics: Stocks & Bonds</h2>
+  <img src="../assets/images/placeholder.png" alt="Investing Basics: Stocks & Bonds" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Investing Basics: Stocks & Bonds — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance10.html">Read More</a>
+</article>
+
+<article class="card finance">
+  <h2>Tax Planning Tips for Individuals</h2>
+  <img src="../assets/images/placeholder.png" alt="Tax Planning Tips for Individuals" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Tax Planning Tips for Individuals — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance11.html">Read More</a>
+</article>
+
+<article class="card finance">
+  <h2>Building an Emergency Fund</h2>
+  <img src="../assets/images/placeholder.png" alt="Building an Emergency Fund" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Building an Emergency Fund — A clear, practical guide that focuses on what matters most for people dealing with finance.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/finance/finance12.html">Read More</a>
+</article>
+
+<article class="card finance">
+  <h2>Credit Card Rewards: Use Wisely</h2>
+  <img src="../assets/images/placeholder.png" alt="Credit Card Rewards: Use Wisely" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Credit Card Rewards: Use Wisely — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to finance situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/finance/finance13.html">Read More</a>
+</article>
+
+
+      <!-- HEALTH -->
+      <div class="card health" id="box">
+        <img src="assets/images/placeholder.png" alt="Healthy living">
+        <h3>Healthy Living: A Complete Guide</h3>
+        <p id="p">Practical daily habits for better sleep, diet and long-term wellbeing.</p>
+        <a class="read-more" href="articles/health/health1.html">Read More</a>
+      </div>
+
+      <div class="card health" id="box">
+        <img src="assets/images/placeholder.png" alt="Mental health">
+        <h3>Mental Health Awareness</h3>
+        <p id="p">How to spot stress signs and practical steps to protect your mental health.</p>
+        <a class="read-more" href="articles/health/health2.html">Read More</a>
+      </div>
+
+      <div class="card health" id="box">
+        <img src="assets/images/placeholder.png" alt="Nutrition">
+        <h3>Nutrition Basics Everyone Should Know</h3>
+        <p id="p">Key nutrients and simple meal ideas for strong energy and focus.</p>
+        <a class="read-more" href="articles/health/health3.html">Read More</a>
+      </div>
+
+      <article class="card health">
+        <h2>Telemedicine: Pros & Cons</h2>
+        <img src="../assets/images/placeholder.png" alt="Telemedicine: Pros & Cons" style="max-width:100%;border-radius:8px;margin:8px 0;">
+        <p id="p">Telemedicine: Pros & Cons — A clear, practical guide that focuses on what matters most for people dealing with health.</p>
+        <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+        <a class="btn read-more" href="../articles/health/health9.html">Read More</a>
+      </article>
+
+      <article class="card health">
+        <h2>Vaccinations: Myths vs Facts</h2>
+        <img src="../assets/images/placeholder.png" alt="Vaccinations: Myths vs Facts" style="max-width:100%;border-radius:8px;margin:8px 0;">
+        <p id="p">Vaccinations: Myths vs Facts — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+        <p id="p">Readers will also find real-world examples and actionable tips specific to health situations. This preview gives you a solid overview; click through for the full article.</p>
+        <a class="btn read-more" href="../articles/health/health10.html">Read More</a>
+      </article>
+
+      <article class="card health">
+        <h2>Substance Use and Recovery Resources</h2>
+        <img src="../assets/images/placeholder.png" alt="Substance Use and Recovery Resources" style="max-width:100%;border-radius:8px;margin:8px 0;">
+        <p id="p">Substance Use and Recovery Resources — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+        <p id="p">Readers will also find real-world examples and actionable tips specific to health situations. This preview gives you a solid overview; click through for the full article.</p>
+        <a class="btn read-more" href="../articles/health/health11.html">Read More</a>
+      </article>
+
+      <article class="card health">
+        <h2>Child Health and Development Milestones</h2>
+        <img src="../assets/images/placeholder.png" alt="Child Health and Development Milestones" style="max-width:100%;border-radius:8px;margin:8px 0;">
+        <p id="p">Child Health and Development Milestones — A clear, practical guide that focuses on what matters most for people dealing with health.</p>
+        <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+        <a class="btn read-more" href="../articles/health/health12.html">Read More</a>
+      </article>
+
+
+      <!-- LEGAL -->
+      <div class="card legal" id="box">
+        <img src="assets/images/placeholder.png" alt="Contracts">
+        <h3>Understanding Contracts</h3>
+        <p id="p">Clear, practical guidance to spot problem clauses and protect yourself legally.</p>
+        <a class="read-more" href="articles/legal/legal1.html">Read More</a>
+      </div>
+
+      <div class="card legal" id="box">
+        <img src="assets/images/placeholder.png" alt="Workplace rights">
+        <h3>Know Your Workplace Rights</h3>
+        <p id="p">Employee rights simplified: contracts, wages, and reporting unfair treatment.</p>
+        <a class="read-more" href="articles/legal/legal2.html">Read More</a>
+      </div>
+
+      <div class="card legal" id="box">
+        <img src="assets/images/placeholder.png" alt="Property law">
+        <h3>Property Law Simplified</h3>
+        <p id="p">An easy guide to ownership, tenancy and common property disputes.</p>
+        <a class="read-more" href="articles/legal/legal3.html">Read More</a>
+      </div>
+      <article class="card legal">
+  <h2>Consumer Protection Rights Explained</h2>
+  <img src="../assets/images/placeholder.png" alt="Consumer Protection Rights Explained" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Consumer Protection Rights Explained — A clear, practical guide that focuses on what matters most for people dealing with legal.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/legal/legal3.html">Read More</a>
+</article>
+
+<article class="card legal">
+  <h2>How to Start a Small Business Legally</h2>
+  <img src="../assets/images/placeholder.png" alt="How to Start a Small Business Legally" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">How to Start a Small Business Legally — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal4.html">Read More</a>
+</article>
+
+<article class="card legal">
+  <h2>Landlord and Tenant Rights</h2>
+  <img src="../assets/images/placeholder.png" alt="Landlord and Tenant Rights" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Landlord and Tenant Rights — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to legal situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/legal/legal5.html">Read More</a>
+</article>
+
+<article class="card legal">
+  <h2>Intellectual Property Essentials</h2>
+  <img src="../assets/images/placeholder.png" alt="Intellectual Property Essentials" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Intellectual Property Essentials — A clear, practical guide that focuses on what matters most for people dealing with legal.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/legal/legal6.html">Read More</a>
+</article>
+
+
+      <!-- CRYPTO -->
+      <div class="card crypto" id="box">
+        <img src="assets/images/placeholder.png" alt="Bitcoin">
+        <h3>Bitcoin Basics Explained</h3>
+        <p id="p">What Bitcoin is, how it works and the risks & opportunities for beginners.</p>
+        <a class="read-more" href="articles/crypto/crypto1.html">Read More</a>
+      </div>
+
+      <div class="card crypto" id="box">
+        <img src="assets/images/placeholder.png" alt="Ethereum">
+        <h3>Ethereum & Smart Contracts</h3>
+        <p id="p">How programmable money works and why smart contracts matter for apps.</p>
+        <a class="read-more" href="articles/crypto/crypto2.html">Read More</a>
+      </div>
+
+      <div class="card crypto" id="box">
+        <img src="assets/images/placeholder.png" alt="Crypto safety">
+        <h3>Staying Safe in Crypto</h3>
+        <p id="p">Security basics: wallets, phishing, and protecting your keys.</p>
+        <a class="read-more" href="articles/crypto/crypto3.html">Read More</a>
+      </div>
+
+      
+<article class="card crypto">
+  <h2>Layer 2 Solutions and Scaling</h2>
+  <img src="../assets/images/placeholder.png" alt="Layer 2 Solutions and Scaling" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Layer 2 Solutions and Scaling — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to crypto situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/crypto/crypto11.html">Read More</a>
+</article>
+
+<article class="card crypto">
+  <h2>Stablecoins: Use Cases and Risks</h2>
+  <img src="../assets/images/placeholder.png" alt="Stablecoins: Use Cases and Risks" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">Stablecoins: Use Cases and Risks — A clear, practical guide that focuses on what matters most for people dealing with crypto.</p>
+  <p id="p">You"ll get checklists, tools, and scenarios to apply the concepts. Perfect if you"re looking for fast wins.</p>
+  <a class="btn read-more" href="../articles/crypto/crypto12.html">Read More</a>
+</article>
+
+<article class="card crypto">
+  <h2>How to Spot Crypto Scams</h2>
+  <img src="../assets/images/placeholder.png" alt="How to Spot Crypto Scams" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">How to Spot Crypto Scams — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to crypto situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/crypto/crypto13.html">Read More</a>
+</article>
+
+<article class="card crypto">
+  <h2>On-Chain Analysis for Traders</h2>
+  <img src="../assets/images/placeholder.png" alt="On-Chain Analysis for Traders" style="max-width:100%;border-radius:8px;margin:8px 0;">
+  <p id="p">On-Chain Analysis for Traders — In this article we break down the essentials so you can understand the topic quickly. We explain core ideas, common terms, and the practical steps you can take today to see results.</p>
+  <p id="p">Readers will also find real-world examples and actionable tips specific to crypto situations. This preview gives you a solid overview; click through for the full article.</p>
+  <a class="btn read-more" href="../articles/crypto/crypto14.html">Read More</a>
+</article>
+
+    </section>
+  </main>
+
+<br><br><br>
+  <!-- FOOTER -->
+  <footer class="container-row" id="hold-foot">
+    <p>Developed by  Ekundayo Shola | <a id="link" href="https://sholafolio.kessug.com" target="_blank">More Info.</a></p>
+  </footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
